@@ -6,7 +6,7 @@ export const conectarMongoDB = (handler : NextApiHandler) =>
     async (req: NextApiRequest, res: NextApiResponse<RespostaPadraoMsg>) => {
 
 
-        //verificar se o banco ja esta conectado, se estiver seguir para o endpoint ou próximo midleware
+        //verificar se o banco ja esta conectado, se estiver seguir para o endpoint ou próximo middleware
         if(mongoose.connections[0].readyState){
             return handler(req, res);
         }

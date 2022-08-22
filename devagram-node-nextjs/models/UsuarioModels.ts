@@ -10,5 +10,7 @@ const UsuarioSchema = new Schema({
     publicacoes: {type: Number, default: 0}
 });
 
+// para exportar o modelo usuarios (linha 14) ou caso 
+// não exista criar o model de nome 'usuarios', passando o Schema (linha 15):
 export const UsuarioModel = (mongoose.models.usuarios ||
     mongoose.model('usuarios', UsuarioSchema));
